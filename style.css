@@ -287,3 +287,169 @@ button, input { font: inherit; }
 @media (max-width: 980px) {
   .link-grid { grid-template-columns: 1fr; }
 }
+
+/* DODATNA MOBILNA PRILAGODBA */
+img, svg, video, iframe {
+  max-width: 100%;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .site-header {
+    backdrop-filter: blur(14px);
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 9px;
+    min-width: 0;
+  }
+
+  .brand__mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    flex: 0 0 auto;
+  }
+
+  .brand strong {
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .theme-switcher {
+    padding: 4px;
+    gap: 3px;
+    flex: 0 0 auto;
+  }
+
+  .theme-switcher button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero__content p,
+  .section-heading p {
+    font-size: 1rem;
+  }
+
+  .hero__actions,
+  .contact-actions,
+  .link-actions {
+    width: 100%;
+  }
+
+  .hero__actions .btn,
+  .contact-actions .btn,
+  .link-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card,
+  .material-card,
+  .step-card,
+  .privacy-card,
+  .contact-card,
+  .link-card {
+    border-radius: 22px;
+  }
+
+  .hero-card,
+  .privacy-card,
+  .contact-card {
+    padding: 22px;
+  }
+
+  .material-card,
+  .link-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .material-card__icon,
+  .link-card__icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+  }
+
+  .card-link {
+    margin-top: 22px;
+    padding-top: 16px;
+  }
+
+  .faq-question {
+    padding: 18px;
+  }
+
+  .faq-answer p {
+    padding: 0 18px 18px;
+  }
+
+  .footer {
+    padding-bottom: calc(26px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 3.15rem);
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 9vw, 2.35rem);
+  }
+
+  .section-pad {
+    padding: 54px 0;
+  }
+
+  .nav-menu {
+    inset: 68px 12px auto 12px;
+  }
+
+  .btn {
+    padding: 13px 16px;
+  }
+
+  .hero__actions {
+    gap: 10px;
+  }
+
+  .hero__contact-note,
+  .hero__small-note {
+    font-size: 0.94rem !important;
+  }
+
+  .stats-grid strong {
+    font-size: 1.45rem;
+  }
+
+  .material-card h3,
+  .link-card__content h3 {
+    font-size: 1.32rem;
+  }
+
+  .contact-card strong {
+    font-size: 1.05rem;
+  }
+}
